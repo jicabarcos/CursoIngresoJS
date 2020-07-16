@@ -11,5 +11,5 @@ function mostrarAumento()
 
 	finalcondto = importe * 75 / 100
 
-	document.getElementById("txtIdResultado").value = parseFloat(finalcondto);
+	document.getElementById("txtIdResultado").value = parseFloat(finalcondto).toFixed(2);
 }
