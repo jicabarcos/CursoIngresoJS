@@ -9,5 +9,7 @@ function mostrar()
 		alert("Niña bonita");
 		
 	}
+
+	alert("Fin de la función.");
 	
 }//FIN DE LA FUNCIÓN
