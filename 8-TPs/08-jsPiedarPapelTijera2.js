@@ -1,4 +1,4 @@
-let rand, resultado;
+let rand;
 let ContadorDeEmpates=0;
 let ContadorDeGanadas=0;
 let ContadorDePerdidas=0;
@@ -26,74 +26,88 @@ function comenzar()
         
     }
 
+	mostrarResultado();
+	
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
 	alert("Pulsaste piedra.");
     if (rand == "Piedra"){
+
 		alert(`La máquina eligió ${rand} ---> Empate.`);
-		resultado = "tie";
 		ContadorDeEmpates++;
+
     }
     else if(rand == "Papel"){
+
 		alert(`La máquina eligió ${rand} ---> Perdiste, F.`);
-		resultado = "lose";
 		ContadorDePerdidas++;
+
     }
     else{
+
 		alert(`La máquina eligió ${rand} ---> Ganaste, GGWP!`);
-		resultado = "win";
 		ContadorDeGanadas++;
+
     }
 
 	mostrarResultado();
 	comenzar();
+
 }//FIN DE LA FUNCIÓN
 function papel()
 {
 
 	alert("Pulsaste papel.");
     if (rand == "Piedra"){
+
 		alert(`La máquina eligió ${rand} ---> Ganaste, GGWP!`);
-		resultado = "win";
 		ContadorDeGanadas++;
+
     }
     else if(rand == "Papel"){
+
 		alert(`La máquina eligió ${rand} ---> Empate.`);
-		resultado = "tie";
 		ContadorDeEmpates++;
+
     }
     else{
+
 		alert(`La máquina eligió ${rand} ---> Perdiste, F.`);
-		resultado = "lose";
 		ContadorDePerdidas++;
+
     }
 
 	mostrarResultado();
 	comenzar();
+
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
 	
 	alert("Pulsaste tijera.");
     if (rand == "Piedra"){
+
 		alert(`La máquina eligió ${rand} ---> Perdiste, F.`);
-		resultado = "lose";
 		ContadorDePerdidas++;
+
     }
     else if(rand == "Papel"){
+
 		alert(`La máquina eligió ${rand} ---> Ganaste, GGWP!`);
-		resultado = "win";
 		ContadorDeGanadas++;
+
     }
     else{
+
 		alert(`La máquina eligió ${rand} ---> Empate.`);
-		resultado = "tie";
 		ContadorDeEmpates++;
+
     }
 
 	mostrarResultado();
 	comenzar();
+
 }//FIN DE LA FUNCIÓN
 
 function mostrarResultado()
