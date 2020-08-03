@@ -4,12 +4,12 @@ function mostrar()
 {
 	let clave;
 
-	clave = prompt("ingrese el número clave.");
+	clave = prompt("Ingrese clave.");
 
 	while (clave != "utn750"){
 
-		alert("La clave ingresada es incorrecta. Vuelva a intentar.");
-		clave = prompt("ingrese el número clave.");
+		clave = prompt("La clave ingresada es incorrecta. Vuelva a intentar.");
+		
 	}
 
 	alert("Felicitaciones, clave correcta!");

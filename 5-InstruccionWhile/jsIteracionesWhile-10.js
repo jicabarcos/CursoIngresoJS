@@ -12,18 +12,64 @@ hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
 {
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let num, flag, sumaPos, sumaNeg, contPos, contNeg, contCero, cantPar, promPos, promNeg, diferencia, seguir;
 
-	respuesta="si";
+	flag = 0;
+	sumaPos = 0;
+	sumaNeg = 0;
+	cantPos = 0;
+	cantNeg = 0;
+	cantCero = 0;
+	cantPar = 0;
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+	do{
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+		num = parseInt(prompt("Ingrese un numero"));
+
+		if (num > 0){
+
+			sumaPos += num;
+			cantPos ++;
+			if ((num % 2) == 0){
+
+				cantPar ++;
+
+			}
+
+		}
+		else if (num < 0){
+
+			sumaNeg += num;
+			cantNeg ++;
+			if ((num % 2) == 0){
+
+				cantPar ++;
+
+			}
+
+		}
+		else{
+
+			cantCero++;
+
+		}
+
+		seguir = prompt('Ingrese "x" si desea terminar.');
+
+	} while (seguir != "x");
+
+	promPos = sumaPos / cantPos;
+	promNeg = sumaNeg / cantNeg;
+	diferencia = sumaPos + sumaNeg;
+
+	document.write("Suma de negativos: " + sumaNeg);
+	document.write("</br>Suma de positivos: " + sumaPos);
+	document.write("</br>Cantidad de negativos: " + cantNeg);
+	document.write("</br>Cantidad de positivos: " + cantPos);
+	document.write("</br>Cantidad de ceros: " + cantCero);
+	document.write("</br>Cantidad de pares: " + cantPar);
+	document.write("</br>Pormedio de positivos: " + promPos);
+	document.write("</br>Promedio de negativos: " + promNeg);
+	document.write("</br>Diferencia entre positivos y negativos: " + diferencia);
+
 }//FIN DE LA FUNCIÓN
