@@ -16,7 +16,7 @@ function ComenzarIngreso ()
 	// Ingreso de datos
 	edad = parseInt(prompt("Ingrese edad:"));
 
-	while ((edad < 18) || (edad > 90)){
+	while ((edad < 18) || (edad > 90) || (isNaN(precio))){
 
 		edad = parseInt(prompt("Debe ser entre 18 y 90 inclusive. Vuelva a ingresar:"));
 
@@ -37,7 +37,7 @@ function ComenzarIngreso ()
 
 	estadoCivil = parseInt(prompt("Ingrese estado civil:"));
 
-	while ((estadoCivil < 1) || (estadoCivil > 4)){
+	while ((estadoCivil < 1) || (estadoCivil > 4) || (isNaN(precio))){
 
 		estadoCivil = parseInt(prompt("Debe elegir una de las opciones del 1 al 4. Vuelva a ingresar:"));
 
@@ -55,7 +55,7 @@ function ComenzarIngreso ()
 
 	legajo = parseInt(prompt("Ingrese número de legajo:"));
 
-	while ((legajo < 1000) || (legajo > 9999)){
+	while ((legajo < 1000) || (legajo > 9999) || (isNaN(precio))){
 
 		legajo = parseInt(prompt("Debe ser un número de 4 cifras, sin ceros a la izquierda. Vuelva a ingresar:"));
 
