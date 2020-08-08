@@ -9,7 +9,7 @@ function mostrarAumento()
 
 	importe = parseFloat(document.getElementById("txtIdImporte").value);
 
-	finalcondto = importe * 75 / 100
+	finalcondto = importe * 75 / 100;
 
 	document.getElementById("txtIdResultado").value = parseFloat(finalcondto).toFixed(2);
 }
